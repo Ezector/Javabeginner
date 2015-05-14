@@ -1,4 +1,12 @@
-Person alexIIL = new Person();
-alexIIL.setName("Fred");
-alexIIL.setMaximumBooks(10);
-alexIIL.getMaximumBooks();
+ArrayList<Book> list = new ArrayList<Book>(); 
+Book b1 = new Book("Harry Potter");
+Book b2 = new Book("Dark Knight");
+list.add(b1);
+list.add(b2);
+
+Person p1 = new Person();
+p1.setName("Alex");
+b1.setPerson(p1);
+
+list.remove(b1);
+list
