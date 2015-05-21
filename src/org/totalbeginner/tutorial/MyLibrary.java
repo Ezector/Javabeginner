@@ -8,10 +8,7 @@ public class MyLibrary {
 	String name;
 	ArrayList<Book> books;
 	ArrayList<Person> people;
-	private Book b1;
-	private Book b2;
-	private Person p1;
-	private Person p2;
+
 
 	public MyLibrary(String name) {
 		this.name = name;
@@ -33,16 +30,44 @@ public class MyLibrary {
 		return people;
 	}
 
-	public void setup(){
-		b1 = new Book("Book1");
-		b2 = new Book("Book2");
+	public void addBook(Book b1) {
+		this.books.add(b1);
 		
-		p1 = new Person();
-		p2 = new Person();
-		p1.setName("Alex");
-		p2.setName("Lucas");
+	}
+
+	public void removeBook(Book b1) {
+		this.books.remove(b1);
 		
-		MyLibrary ml = new MyLibrary("test");
 	}
 	
-}
+	public void addPerson(Person p1){
+		this.people.add(p1);
+	}
+
+	public void removePerson(Person p1){
+		this.people.remove(p1);
+	}
+
+	public boolean checkOut(Book b1, Person p1) {
+		if (b1.getPerson()  == null) {
+			b1.setPerson(p1);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+
+	public boolean checkIn(Book b1) {
+		if (b1.getPerson()!= null){
+			b1.setPerson(null);
+			return true;
+		}
+		else {
+			return false;
+			}
+		}
+	}
+	
+

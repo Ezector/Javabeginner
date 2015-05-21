@@ -1,6 +1,5 @@
 package org.totalbeginner.tutorial;
 
-import java.util.ArrayList;
 
 public class Book {
 
