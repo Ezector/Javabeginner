@@ -24,8 +24,8 @@ public class Book {
 		return title;
 	}
 
-	public void setPerson(Person p1) {
-		this.person = p1;
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 
 	public Person getPerson() {
